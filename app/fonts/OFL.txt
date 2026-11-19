@@ -1,0 +1,14 @@
+Fonts in this folder (SIL Open Font License 1.1):
+
+- Anton-Regular.ttf
+  Source: https://raw.githubusercontent.com/google/fonts/main/ofl/anton/Anton-Regular.ttf
+  License: SIL Open Font License, Version 1.1 — https://scripts.sil.org/OFL
+  Copyright: 2020 The Anton Project Authors (https://github.com/googlefonts/AntonFont.git)
+
+- Pacifico-Regular.ttf
+  Source: https://raw.githubusercontent.com/google/fonts/main/ofl/pacifico/Pacifico-Regular.ttf
+  License: SIL Open Font License, Version 1.1 — https://scripts.sil.org/OFL
+  Copyright: 2018 The Pacifico Project Authors (https://github.com/googlefonts/Pacifico)
+
+Both fonts are vendored locally and loaded only from this folder; the app
+makes no network request for fonts or anything else.

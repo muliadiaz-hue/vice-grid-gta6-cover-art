@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vice Grid — GTA 6-style cover maker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <h1>VICE GRID</h1>
+  <p class="tagline">Turn your photos into a neon-coast cover — pick a layout, type a caption, export.</p>
+</header>
+<main class="editor">
+  <section class="preview-wrap">
+    <canvas id="cover" width="960" height="540"></canvas>
+    <p id="status" class="status" role="status">Loading…</p>
+  </section>
+  <aside class="controls">
+    <div class="field">
+      <label for="layout">Layout</label>
+      <select id="layout"></select>
+    </div>
+    <div class="field">
+      <label for="grade">Colour grade</label>
+      <select id="grade"></select>
+    </div>
+    <div class="field">
+      <label for="size">Export size</label>
+      <select id="size"></select>
+    </div>
+    <div class="field">
+      <label for="title">Cover title</label>
+      <input id="title" type="text" maxlength="40" value="Neon Shore" autocomplete="off">
+    </div>
+    <div class="field">
+      <label for="subtitle">Subtitle</label>
+      <input id="subtitle" type="text" maxlength="60" value="Vice City nights" autocomplete="off">
+    </div>
+    <div class="field">
+      <label id="panel-label" for="panel-caption">Panel 1</label>
+      <input id="panel-caption" type="text" maxlength="28" placeholder="Per-panel caption (optional)" autocomplete="off">
+      <p class="hint">Click a panel on the cover to select it. Drag to pan its photo, scroll to zoom.</p>
+    </div>
+    <div class="row">
+      <button id="undo" type="button" disabled>Undo</button>
+      <button id="redo" type="button" disabled>Redo</button>
+    </div>
+    <div class="field">
+      <label>Photos</label>
+      <div id="tray" class="tray"></div>
+      <div class="row">
+        <label class="file-btn" for="add-photos">Add photos</label>
+        <input id="add-photos" type="file" accept="image/*" multiple hidden>
+        <button id="sample-boulevard" type="button">+ Boulevard</button>
+        <button id="sample-pier" type="button">+ Pier</button>
+      </div>
+    </div>
+    <div class="row export-row">
+      <button id="export" type="button" class="primary">Export PNG</button>
+      <button id="export-all" type="button">Export all 4 sizes</button>
+    </div>
+  </aside>
+</main>
+<footer class="foot">
+  <p>Vice Grid is an original cover maker. It uses only your photos, vendored OFL fonts
+  (Anton, Pacifico) and the two bundled sample photos. It works fully offline and
+  contains no Rockstar artwork, logo or font.</p>
+</footer>
+<script type="module" src="src/main.js"></script>
+</body>
+</html>
